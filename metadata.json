@@ -1,0 +1,5 @@
+{
+  "name": "Solana Meme Coin Factory",
+  "description": "An AI-powered tool to generate and deploy meme coins on the Solana blockchain. Simply provide a prompt, and the AI will create a unique coin name, ticker, description, and logo. The platform then simulates the deployment process onto the Solana devnet.",
+  "requestFramePermissions": []
+}

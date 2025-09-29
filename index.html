@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solana Meme Coin Factory</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@solana/wallet-adapter-react-ui@latest/styles.css" />
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .wallet-adapter-button-trigger {
+        background-color: #2563eb;
+      }
+       .wallet-adapter-button-trigger:hover {
+        background-color: #1d4ed8;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.21.0",
+    "@solana/wallet-adapter-base": "https://esm.sh/@solana/wallet-adapter-base@0.9.23",
+    "@solana/wallet-adapter-react": "https://esm.sh/@solana/wallet-adapter-react@0.15.35",
+    "@solana/wallet-adapter-react-ui": "https://esm.sh/@solana/wallet-adapter-react-ui@0.9.35",
+    "@solana/wallet-adapter-wallets": "https://esm.sh/@solana/wallet-adapter-wallets@0.19.32",
+    "@solana/web3.js": "https://esm.sh/@solana/web3.js@1.91.4",
+    "@metaplex-foundation/js": "https://esm.sh/@metaplex-foundation/js@0.20.1",
+    "buffer": "https://esm.sh/buffer@6.0.3",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "@metaplex-foundation/mpl-token-metadata": "https://aistudiocdn.com/@metaplex-foundation/mpl-token-metadata@^3.4.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-900 text-white">
+    <div id="root"></div>
+    <script type="module">
+      // Polyfill Buffer for Solana libraries
+      import { Buffer } from 'buffer';
+      window.Buffer = Buffer;
+      // Dynamically import the main app script to ensure polyfill is loaded first
+      import('/index.tsx');
+    </script>
+  </body>
+</html>
