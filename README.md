@@ -11,6 +11,16 @@ A React/Vite concept generator that uses Gemini for token ideas and connects a b
 - Metadata upload and token/NFT creation through Metaplex
 - Progress and user-rejection error handling
 
+```mermaid
+flowchart LR
+  P["User prompt"] --> G["Gemini concept and artwork"]
+  G --> M["Metadata upload"]
+  W["Connected wallet"] --> C{"Explicit approval"}
+  M --> C
+  C -->|"approved"| D["Solana devnet mint"]
+  C -->|"rejected"| X["Stop safely"]
+```
+
 ## Quick start
 
 ```bash
