@@ -1,20 +1,30 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Solana Meme Coin Factory
 
-# Run and deploy your AI Studio app
+**Status:** experimental prototype · devnet only
 
-This contains everything you need to run your app locally.
+A React/Vite concept generator that uses Gemini for token ideas and connects a browser wallet to create fungible tokens or NFTs on Solana devnet through Metaplex.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1Vwoo8hI1U-FByo-VgBoUX7HgX0b8AffC
+## Capabilities
 
-## Run Locally
+- AI-assisted name, ticker, description, and artwork generation
+- Browser-wallet connection and explicit transaction approval
+- Metadata upload and token/NFT creation through Metaplex
+- Progress and user-rejection error handling
 
-**Prerequisites:**  Node.js
+## Quick start
 
+```bash
+npm install
+printf 'GEMINI_API_KEY=your_key_here\n' > .env.local
+npm run dev
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+`npm run build` performs the available production build check.
+
+## Safety boundary
+
+The interface targets devnet and still creates signed blockchain transactions. Review every wallet prompt. This repository is educational software, not financial advice, an audited token launcher, or evidence of a live deployment.
+
+## Limitations
+
+There is no automated test suite, security audit, liquidity workflow, or mainnet release process.
